@@ -1,0 +1,38 @@
+.header {
+  position: relative;
+  width: 100%;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.container-icons {
+  padding: 3rem;
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.logo {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .header {
+    img {
+      width: 592px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    display: block;
+  }
+}
