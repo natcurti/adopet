@@ -1,0 +1,61 @@
+@import "src/variables";
+@import "src/mixins";
+
+.register {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $white;
+  position: relative;
+  padding-top: 9rem;
+}
+
+.paws {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 40%;
+}
+
+.container-main {
+  @include flexColumnCenter;
+  width: 80%;
+  margin: 0 auto;
+
+  h1 {
+    @include flexColumnCenter;
+    margin-bottom: 1rem;
+    img {
+      width: 60%;
+    }
+  }
+
+  h2 {
+    color: $blue;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+}
+
+.shape {
+  width: 75px;
+  top: 40%;
+  position: absolute;
+  transform: scaleX(-1);
+}
+
+.container-button {
+  margin: 1.5rem 0 3rem;
+}
+
+.icon {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 2rem;
+  color: $dark-gray;
+}

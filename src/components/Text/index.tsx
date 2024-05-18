@@ -6,12 +6,12 @@ interface IText {
 }
 
 const Text = ({ color, children }: IText) => {
-  const textSyle = {
-    color: color,
-  };
-
   return (
-    <p style={textSyle} className={styles.text}>
+    <p
+      className={`${styles.text} ${
+        color === "white" ? styles["text-white"] : styles["text-blue"]
+      }`}
+    >
       {children}
     </p>
   );

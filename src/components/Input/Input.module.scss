@@ -1,0 +1,29 @@
+@import "src/variables";
+@import "src/mixins";
+
+.container-input {
+  @include flexColumnCenter;
+  position: relative;
+
+  label {
+    color: $dark-gray;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    width: 100%;
+    background-color: $bg-gray;
+    border: none;
+    border-radius: 0.375rem;
+    height: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-bottom: 1.25rem;
+
+    &::placeholder {
+      text-align: center;
+      font-family: $font;
+      color: $light-gray;
+    }
+  }
+}

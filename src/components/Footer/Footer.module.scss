@@ -1,8 +1,16 @@
 @import "/src/variables";
+@import "src/mixins";
 
 .footer {
+  @include flexColumnCenter;
+  justify-content: center;
   height: 6.5rem;
   background-color: $green;
-  position: relative;
+  position: absolute;
+  width: 100%;
   z-index: 2;
+
+  p {
+    color: $white;
+  }
 }
