@@ -1,0 +1,13 @@
+@import "src/variables";
+
+.forgot-password {
+  text-decoration: none;
+  color: $coral;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.container-button {
+  margin: 2rem 0 2rem;
+}
