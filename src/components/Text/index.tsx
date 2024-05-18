@@ -1,11 +1,22 @@
+import styles from "./Text.module.scss";
+
 interface IText {
-  size: number;
+  size: string;
   color: string;
   children: React.ReactNode;
 }
 
 const Text = ({ size, color, children }: IText) => {
-  return <p>{children}</p>;
+  const textSyle = {
+    color: color,
+    fontSize: size,
+  };
+
+  return (
+    <p style={textSyle} className={styles.text}>
+      {children}
+    </p>
+  );
 };
 
 export default Text;
