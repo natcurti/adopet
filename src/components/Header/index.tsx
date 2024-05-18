@@ -6,7 +6,7 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
   const iconProps = {
-    size: "35",
+    size: "25",
     color: "#FFF",
   };
 

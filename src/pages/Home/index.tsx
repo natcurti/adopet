@@ -18,7 +18,7 @@ const Home = () => {
           <img src={logo} alt="Logo simples escrito Adopet na cor branca." />
         </h1>
         <h2>Boas vindas!</h2>
-        <Text size="1.25rem" color="#FFF">
+        <Text color="#FFF">
           Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a
           gente!
         </Text>

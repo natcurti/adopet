@@ -3,43 +3,75 @@
 
 .home {
   width: 100%;
-  height: 750px;
-  min-height: 100vh;
+  height: 700px;
   background-color: $blue;
-  padding-top: 12rem;
+  padding-top: 10rem;
   position: relative;
 }
 
 .shape {
   position: absolute;
-  right: -2rem;
-  width: 100px;
+  top: 25%;
+  right: 0;
+  width: 70px;
 }
 
 .container-main {
   @include flexColumnCenter;
+
   margin: 0 auto;
   width: 60%;
 
   h1 {
-    margin-bottom: 2rem;
+    @include flexColumnCenter;
+    margin-bottom: 1.5rem;
+    img {
+      width: 80%;
+    }
   }
 
   h2 {
     color: $white;
     font-weight: 500;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 .container-buttons {
   @include flexColumnCenter;
   gap: 1rem;
+  width: 100%;
 }
 
 .illustration {
   position: absolute;
   width: 280px;
   bottom: -2rem;
+}
+
+@media (min-width: 480px) {
+  .home {
+    padding-top: 12rem;
+  }
+  .shape {
+    width: 100px;
+  }
+  .container-main {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    width: 460px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .home {
+    padding-top: 7rem;
+  }
 }

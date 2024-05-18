@@ -14,5 +14,13 @@
 }
 
 .btn:hover {
-  opacity: 0.8;
+  background-color: $coral-hover;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
