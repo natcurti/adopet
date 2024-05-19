@@ -1,0 +1,30 @@
+.shape,
+.shape-home {
+  position: absolute;
+  width: 70px;
+}
+
+.shape {
+  left: 0;
+  top: 40%;
+  transform: scaleX(-1);
+}
+
+.shape-home {
+  top: 25%;
+  right: 0;
+}
+
+@media (min-width: 480px) {
+  .shape {
+    left: unset;
+    right: 0;
+    top: 35%;
+    transform: unset;
+  }
+
+  .shape,
+  .shape-home {
+    width: 100px;
+  }
+}

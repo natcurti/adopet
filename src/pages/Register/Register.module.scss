@@ -1,3 +1,41 @@
+@import "src/mixins";
+@import "src/variables";
+
+.title {
+  @include flexColumnCenter;
+  margin-bottom: 1rem;
+  img {
+    width: 60%;
+  }
+}
+
+.subtitle {
+  color: $blue;
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
 .container-button {
   margin: 1.5rem 0 3rem;
+}
+
+@media (min-width: 480px) {
+  .title {
+    img {
+      width: 280px;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .form {
+    width: 25rem;
+  }
 }

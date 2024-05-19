@@ -1,18 +1,14 @@
 import Text from "src/components/Text";
 import styles from "./Home.module.scss";
 import logo from "/assets/logo-adopet.png";
-import shape from "/assets/shape.png";
-import illustration from "/assets/illustration-pets.png";
+import illustration from "src/pages/Home/assets/illustration-pets.png";
 import Button from "src/components/Button";
+import Shape from "src/components/Shape";
 
 const Home = () => {
   return (
     <div className={styles.home}>
-      <img
-        src={shape}
-        alt="Forma ondulada na cor verde água"
-        className={styles.shape}
-      />
+      <Shape className="home" />
       <main className={styles["container-main"]}>
         <h1>
           <img src={logo} alt="Logo simples escrito Adopet na cor branca." />

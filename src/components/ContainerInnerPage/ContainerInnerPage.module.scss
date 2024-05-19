@@ -9,44 +9,26 @@
   padding-top: 9rem;
 }
 
-.paws {
+.paws,
+.user {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 2;
+}
+
+.paws {
   width: 40%;
+}
+
+.user {
+  padding: 1.75rem;
 }
 
 .container-main {
   @include flexColumnCenter;
   width: 80%;
   margin: 0 auto;
-
-  h1 {
-    @include flexColumnCenter;
-    margin-bottom: 1rem;
-    img {
-      width: 60%;
-    }
-  }
-
-  h2 {
-    color: $blue;
-    margin-bottom: 1rem;
-  }
-
-  form {
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-  }
-}
-
-.shape {
-  width: 75px;
-  top: 40%;
-  position: absolute;
-  transform: scaleX(-1);
 }
 
 @media (min-width: 480px) {
@@ -56,28 +38,6 @@
 
   .paws {
     width: 195px;
-  }
-
-  .container-main {
-    h1 {
-      img {
-        width: 280px;
-      }
-    }
-    h2 {
-      font-size: 1.25rem;
-    }
-
-    form {
-      width: 25rem;
-    }
-  }
-
-  .shape {
-    transform: unset;
-    right: 0;
-    top: 35%;
-    width: 100px;
   }
 }
 

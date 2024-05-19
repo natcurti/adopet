@@ -1,42 +1,35 @@
-import Text from "src/components/Text";
 import styles from "./ContainerInnerPage.module.scss";
-import logo from "/assets/logo-adopet-blue.png";
-import paws from "/assets/paws.png";
-import shape from "/assets/shape.png";
+import paws from "src/components/ContainerInnerPage/assets/paws.png";
+import user from "src/components/ContainerInnerPage/assets/user-logo.png";
 
 interface IContainerRegisterAndLogin {
   children: React.ReactNode;
-  isInWhichPage: "register" | "login" | "message" | "profile" | "inner-home";
+  isLoggedIn: boolean;
 }
 
 const ContainerInnerPage = ({
   children,
-  isInWhichPage,
+  isLoggedIn,
 }: IContainerRegisterAndLogin) => {
   return (
     <div className={styles.container}>
-      <img
-        src={paws}
-        className={styles.paws}
-        alt="Ilustração de três patinhas de animais"
-      />
-      <main className={styles["container-main"]}>
-        <h1>
-          <img src={logo} alt="Logo simples escrito Adopet na cor azul." />
-        </h1>
-        {isInWhichPage === "register" && <h2>Ainda não tem cadastro?</h2>}
-        <Text color="blue">
-          {isInWhichPage === "register"
-            ? "Então, antes de buscar seu melhor amigo, precisamos de alguns dados:"
-            : "Já tem conta? Faça seu login:"}
-        </Text>
-        <form>{children}</form>
-      </main>
-      <img
-        src={shape}
-        alt="Forma ondulada na cor verde água"
-        className={styles.shape}
-      />
+      {!isLoggedIn && (
+        <img
+          src={paws}
+          className={styles.paws}
+          alt="Ilustração de três patinhas de animais"
+        />
+      )}
+
+      {isLoggedIn && (
+        <img
+          src={user}
+          className={styles.user}
+          alt="Logo de usuário na cor branca e verde água"
+        />
+      )}
+
+      <main className={styles["container-main"]}>{children}</main>
     </div>
   );
 };
