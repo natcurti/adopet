@@ -4,6 +4,7 @@ import DefaultPage from "./pages/DefaultPage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Message from "./pages/Message";
+import Adoption from "./pages/Adoption";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="cadastro" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="mensagem" element={<Message />} />
+          <Route path="animais-para-adocao" element={<Adoption />} />
         </Route>
       </Routes>
     </BrowserRouter>
