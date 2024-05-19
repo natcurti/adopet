@@ -14,8 +14,8 @@ const sliceAnimals = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getAnimals.fulfilled, (state, { payload }) => {
-      state.push(payload);
+    builder.addCase(getAnimals.fulfilled, (_state, { payload }) => {
+      return payload;
     });
   },
 });

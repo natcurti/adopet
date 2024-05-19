@@ -1,0 +1,56 @@
+@import "src/variables";
+
+.container {
+  width: 360px;
+  background-color: $bg-gray;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 100px 50px;
+  grid-template-areas:
+    "pet-image pet-name"
+    "pet-image pet-details"
+    "pet-image pet-guardian";
+}
+
+.photo {
+  grid-area: pet-image;
+  place-self: center;
+}
+
+.name {
+  grid-area: pet-name;
+  font-weight: 600;
+  color: $blue;
+  align-self: center;
+}
+
+.details {
+  grid-area: pet-details;
+  color: $dark-gray;
+  font-size: 0.875rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.guardian {
+  grid-area: pet-guardian;
+  color: $dark-gray;
+
+  p:nth-child(1) {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    p {
+      font-size: 0.625rem;
+    }
+  }
+}

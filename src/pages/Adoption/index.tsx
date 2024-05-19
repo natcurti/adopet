@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import CardAnimal from "src/components/CardAnimal";
 import ContainerInnerPage from "src/components/ContainerInnerPage";
 import Text from "src/components/Text";
 import { getAnimals } from "src/store/reducers/sliceAnimals";
@@ -12,11 +13,16 @@ const Adoption = () => {
     dispatch(getAnimals());
   }, [dispatch]);
 
-  console.log(animals);
+  console.log(animals[0]);
 
   return (
     <ContainerInnerPage isLoggedIn>
-      <Text color="blue">Olá! Veja os amigos disponíveis para adoção!</Text>
+      <h1>
+        <Text color="blue">Olá! Veja os amigos disponíveis para adoção!</Text>
+      </h1>
+      {animals.map((animal) => (
+        <CardAnimal key={animal.id} {...animal} />
+      ))}
     </ContainerInnerPage>
   );
 };
