@@ -1,5 +1,4 @@
 @import "src/variables";
-@import "src/mixins";
 
 .container {
   width: 100%;
@@ -25,12 +24,6 @@
   padding: 1.75rem;
 }
 
-.container-main {
-  @include flexColumnCenter;
-  width: 80%;
-  margin: 0 auto;
-}
-
 @media (min-width: 480px) {
   .container {
     padding-top: 12rem;
@@ -38,11 +31,5 @@
 
   .paws {
     width: 195px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-main {
-    width: 38rem;
   }
 }

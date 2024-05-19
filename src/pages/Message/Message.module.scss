@@ -1,8 +1,17 @@
 @import "src/variables";
+@import "src/mixins";
 
 .text {
+  margin: 0 auto;
   width: 80%;
+  text-align: center;
   padding-top: 2rem;
+}
+
+.container {
+  @include flexColumnCenter;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .form {
@@ -30,5 +39,9 @@
 
   .shape {
     display: block;
+  }
+
+  .container {
+    width: 38rem;
   }
 }

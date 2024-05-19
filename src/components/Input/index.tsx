@@ -8,17 +8,25 @@ interface IInput {
   children?: React.ReactNode;
 }
 
-const Input = ({ label, placeholder, type, isModelTwo, children }: IInput) => {
+const Input = ({
+  label,
+  placeholder,
+  type,
+  isModelTwo = false,
+  children,
+}: IInput) => {
   return (
     <div className={`${!isModelTwo && styles["container-input"]}`}>
       <label
-        className={`${styles.label} ${isModelTwo} && ${styles["label-model-two"]}`}
+        className={`${styles.label} ${isModelTwo && styles["label-model-two"]}`}
       >
         {label}
       </label>
       {!(type === "textarea") && (
         <input
-          className={`${styles.input} ${isModelTwo} && ${styles["input-model-two"]} `}
+          className={`${styles.input} ${
+            isModelTwo && styles["input-model-two"]
+          } `}
           type={type}
           placeholder={placeholder}
         />

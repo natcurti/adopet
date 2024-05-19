@@ -9,6 +9,12 @@
   }
 }
 
+.container {
+  @include flexColumnCenter;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .form {
   width: 100%;
   text-align: center;
@@ -36,5 +42,11 @@
 
   .form {
     width: 25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 38rem;
   }
 }

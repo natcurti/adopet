@@ -1,0 +1,23 @@
+@import "src/variables";
+
+.title {
+  padding-top: 3rem;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

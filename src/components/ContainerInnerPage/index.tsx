@@ -29,7 +29,7 @@ const ContainerInnerPage = ({
         />
       )}
 
-      <main className={styles["container-main"]}>{children}</main>
+      {children}
     </div>
   );
 };
