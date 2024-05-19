@@ -4,26 +4,55 @@
 .container-input {
   @include flexColumnCenter;
   position: relative;
+}
 
-  label {
-    color: $dark-gray;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+.label {
+  color: $dark-gray;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.label-model-two {
+  display: block;
+  font-weight: 600;
+  color: $blue;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: none;
+  border-radius: 0.375rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 1.25rem;
+}
+
+.input {
+  background-color: $bg-gray;
+  height: 2.5rem;
+
+  &::placeholder {
+    text-align: center;
+    font-family: $font;
+    color: $light-gray;
   }
+}
 
-  input {
-    width: 100%;
-    background-color: $bg-gray;
-    border: none;
-    border-radius: 0.375rem;
-    height: 2.5rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    margin-bottom: 1.25rem;
+.input-model-two {
+  background-color: $white;
 
-    &::placeholder {
-      text-align: center;
-      font-family: $font;
-      color: $light-gray;
-    }
+  &::placeholder {
+    text-align: start;
+    padding-inline-start: 1rem;
+  }
+}
+
+.textarea {
+  padding: 1rem;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: $font;
+    color: $light-gray;
   }
 }

@@ -1,0 +1,34 @@
+@import "src/variables";
+
+.text {
+  width: 80%;
+  padding-top: 2rem;
+}
+
+.form {
+  width: 100%;
+  padding: 2rem 1rem;
+  z-index: 1;
+  background-color: $bg-gray;
+  border-radius: 0.625rem;
+  margin-bottom: 5rem;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+}
+
+.shape {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 40.375rem;
+  }
+
+  .shape {
+    display: block;
+  }
+}
