@@ -1,18 +1,17 @@
-import { Path, UseFormRegister } from "react-hook-form";
+import { Path, UseFormRegister, FieldValues } from "react-hook-form";
 import styles from "./Input.module.scss";
-import { IFormLogin } from "src/types/IFormLogin";
 
-interface IInput {
+interface IInput<T extends FieldValues> {
   label: string;
   type: string;
-  name: Path<IFormLogin>;
-  register: UseFormRegister<IFormLogin>;
+  name: Path<T>;
+  register: UseFormRegister<T>;
   placeholder?: string;
   isModelTwo?: boolean;
   children?: React.ReactNode;
 }
 
-const Input = ({
+const Input = <T extends FieldValues>({
   label,
   type,
   name,
@@ -20,7 +19,7 @@ const Input = ({
   isModelTwo = false,
   children,
   register,
-}: IInput) => {
+}: IInput<T>) => {
   return (
     <div className={`${!isModelTwo && styles["container-input"]}`}>
       <label

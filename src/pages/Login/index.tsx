@@ -27,7 +27,7 @@ const Login = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<IFormLogin>({
     defaultValues: {
       email: "",
       password: "",
