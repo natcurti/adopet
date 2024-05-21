@@ -25,6 +25,14 @@
   padding-inline: 2rem;
 }
 
+.disabled {
+  background-color: $light-gray;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
 @media (min-width: 768px) {
   .btn {
     height: 3rem;

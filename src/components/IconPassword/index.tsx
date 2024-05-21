@@ -2,7 +2,11 @@ import styles from "./IconPassword.module.scss";
 import { IoMdEye } from "react-icons/io";
 
 const IconPassword = () => {
-  return <IoMdEye className={styles.icon} />;
+  return (
+    <button className={styles.container}>
+      <IoMdEye className={styles.icon} />
+    </button>
+  );
 };
 
 export default IconPassword;

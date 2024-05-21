@@ -20,11 +20,14 @@
 
 .input,
 .textarea {
+  padding: 1rem;
+  box-sizing: border-box;
   width: 100%;
   border: none;
   border-radius: 0.375rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  font-family: $font;
 }
 
 .input {
@@ -48,11 +51,12 @@
 }
 
 .textarea {
-  padding: 1rem;
-  box-sizing: border-box;
-
   &::placeholder {
     font-family: $font;
     color: $light-gray;
   }
+}
+
+.input:focus {
+  outline-color: $green;
 }

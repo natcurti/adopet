@@ -1,19 +1,25 @@
+import { Path, UseFormRegister } from "react-hook-form";
 import styles from "./Input.module.scss";
+import { IFormLogin } from "src/types/IFormLogin";
 
 interface IInput {
   label: string;
-  placeholder?: string;
   type: string;
+  name: Path<IFormLogin>;
+  register: UseFormRegister<IFormLogin>;
+  placeholder?: string;
   isModelTwo?: boolean;
   children?: React.ReactNode;
 }
 
 const Input = ({
   label,
-  placeholder,
   type,
+  name,
+  placeholder,
   isModelTwo = false,
   children,
+  register,
 }: IInput) => {
   return (
     <div className={`${!isModelTwo && styles["container-input"]}`}>
@@ -29,6 +35,7 @@ const Input = ({
           } `}
           type={type}
           placeholder={placeholder}
+          {...register(name)}
         />
       )}
       {type === "textarea" && (
