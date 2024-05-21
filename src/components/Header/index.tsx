@@ -3,6 +3,7 @@ import { GoHome } from "react-icons/go";
 import { MdOutlineMailOutline } from "react-icons/md";
 import Logo from "src/components/Header/assets/logo-adopet.svg?react";
 import styles from "./Header.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const iconProps = {
@@ -10,13 +11,27 @@ const Header = () => {
     color: "#FFF",
   };
 
+  const navigate = useNavigate();
+
   return (
     <header className={styles.header}>
       <img src={shape} alt="Forma ondulada em cor verde água" />
       <div className={styles["container-icons"]}>
         <Logo className={styles.logo} />
-        <GoHome {...iconProps} />
-        <MdOutlineMailOutline {...iconProps} />
+        <button className={styles["btn-icon"]}>
+          <GoHome
+            {...iconProps}
+            onClick={() => navigate("/")}
+            className={styles.icon}
+          />
+        </button>
+        <button className={styles["btn-icon"]}>
+          <MdOutlineMailOutline
+            {...iconProps}
+            onClick={() => navigate("/mensagem")}
+            className={styles.icon}
+          />
+        </button>
       </div>
     </header>
   );

@@ -1,3 +1,5 @@
+@import "src/variables";
+
 .header {
   position: relative;
   width: 80%;
@@ -21,6 +23,18 @@
 
 .logo {
   display: none;
+}
+
+.btn-icon {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.icon:hover {
+  fill: $blue;
 }
 
 @media (min-width: 600px) {

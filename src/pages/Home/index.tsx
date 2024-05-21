@@ -4,8 +4,11 @@ import logo from "/assets/logo-adopet.png";
 import illustration from "src/pages/Home/assets/illustration-pets.png";
 import Button from "src/components/Button";
 import Shape from "src/components/Shape";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.home}>
       <Shape className="home" />
@@ -19,10 +22,10 @@ const Home = () => {
           gente!
         </Text>
         <div className={styles["container-buttons"]}>
-          <Button fullWidth type="button">
+          <Button fullWidth type="button" onClick={() => navigate("/login")}>
             Já tenho conta
           </Button>
-          <Button fullWidth type="button">
+          <Button fullWidth type="button" onClick={() => navigate("/cadastro")}>
             Quero me cadastrar
           </Button>
         </div>
