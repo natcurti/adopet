@@ -42,6 +42,7 @@ const Input = <T extends FieldValues>({
           className={styles.textarea}
           placeholder={placeholder}
           rows={10}
+          {...register(name)}
         ></textarea>
       )}
 

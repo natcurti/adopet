@@ -11,6 +11,7 @@ import { IFormRegister } from "src/types/IFormRegister";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ErrorMessage from "src/components/ErrorMessage";
+import formatName from "src/utils/formatName";
 
 const validationSchema = z
   .object({
@@ -22,7 +23,7 @@ const validationSchema = z
     name: z
       .string()
       .min(3, "Digite seu nome")
-      .transform((value) => transformName(value)),
+      .transform((value) => formatName(value)),
     password: z.string().min(6, "Digite sua senha"),
     passwordRepeat: z.string().min(6, "Confirme sua senha"),
   })
@@ -30,17 +31,6 @@ const validationSchema = z
     message: "As senhas não coincidem",
     path: ["passwordRepeat"],
   });
-
-const transformName = (value: string) => {
-  let allName = [...value.split(" ")];
-  allName = allName.map(
-    (word) => word.charAt(0).toUpperCase() + word.slice(1, word.length)
-  );
-
-  const fullName = allName.toString().replace(/,/g, " ");
-
-  return fullName;
-};
 
 const Register = () => {
   const {

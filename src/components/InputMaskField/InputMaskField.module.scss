@@ -1,25 +1,14 @@
 @import "src/variables";
-@import "src/mixins";
-
-.container-input {
-  @include flexColumnCenter;
-  position: relative;
-}
 
 .label {
-  color: $dark-gray;
+  display: block;
+  font-weight: 600;
+  color: $blue;
   font-size: 1rem;
   margin-bottom: 0.75rem;
 }
 
-.label-model-two {
-  display: block;
-  font-weight: 600;
-  color: $blue;
-}
-
-.input,
-.textarea {
+.input {
   padding: 1rem;
   box-sizing: border-box;
   width: 100%;
@@ -28,29 +17,11 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   margin-bottom: 1rem;
   font-family: $font;
-}
-
-.input {
-  background-color: $bg-gray;
+  background-color: $white;
   height: 2.5rem;
 
   &::placeholder {
-    text-align: center;
-    font-family: $font;
-    color: $light-gray;
-  }
-}
-
-.input-model-two {
-  background-color: $white;
-
-  &::placeholder {
     text-align: start;
-  }
-}
-
-.textarea {
-  &::placeholder {
     font-family: $font;
     color: $light-gray;
   }
