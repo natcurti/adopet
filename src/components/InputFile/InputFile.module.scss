@@ -1,0 +1,30 @@
+@import "src/variables";
+@import "src/mixins";
+
+.container {
+  @include flexColumnCenter;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  align-self: flex-start;
+  color: $blue;
+  font-weight: 600;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  border-radius: 50%;
+  border: 3px solid $green;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.subtitle {
+  color: $coral;
+  font-size: 0.75rem;
+}

@@ -1,7 +1,7 @@
 import ContainerInnerPage from "src/components/ContainerInnerPage";
 import Input from "src/components/Input";
 import Text from "src/components/Text";
-import styles from "./Message.module.scss";
+import styles from "src/pages/Message&Profile/Message&Profile.module.scss";
 import Button from "src/components/Button";
 import Shape from "src/components/Shape";
 

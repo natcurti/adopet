@@ -1,12 +1,7 @@
 @import "src/variables";
 @import "src/mixins";
 
-.text {
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-  padding-top: 2rem;
-}
+// Common Styles
 
 .container {
   @include flexColumnCenter;
@@ -44,4 +39,22 @@
   .container {
     width: 38rem;
   }
+}
+
+// Styles applied only in Message Page
+.text {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+// Styles applied only in Profile Page
+
+.title {
+  color: $dark-gray;
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }

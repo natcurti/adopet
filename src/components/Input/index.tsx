@@ -2,7 +2,7 @@ import styles from "./Input.module.scss";
 
 interface IInput {
   label: string;
-  placeholder: string;
+  placeholder?: string;
   type: string;
   isModelTwo?: boolean;
   children?: React.ReactNode;
